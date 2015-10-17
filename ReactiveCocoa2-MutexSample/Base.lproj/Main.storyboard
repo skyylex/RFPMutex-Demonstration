@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,7 +15,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqY-Wn-TfB">
+                                <rect key="frame" x="318" y="285" width="64" height="30"/>
+                                <animations/>
+                                <state key="normal" title="STOP UP"/>
+                                <connections>
+                                    <action selector="stopPullUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o50-vk-CBJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJX-3k-Wta">
+                                <rect key="frame" x="215" y="235" width="71" height="30"/>
+                                <animations/>
+                                <state key="normal" title="START UP"/>
+                                <connections>
+                                    <action selector="startPullUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcw-CU-YME"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEu-6n-F7S">
+                                <rect key="frame" x="202" y="285" width="97" height="30"/>
+                                <animations/>
+                                <state key="normal" title="START DOWN"/>
+                                <connections>
+                                    <action selector="startPullDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6h5-pw-1n6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UT-zc-gQ3">
+                                <rect key="frame" x="305" y="235" width="90" height="30"/>
+                                <animations/>
+                                <state key="normal" title="STOP DOWN"/>
+                                <connections>
+                                    <action selector="stopPullDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Uj-3T-1eL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5UT-zc-gQ3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="79v-CY-Olv"/>
+                            <constraint firstItem="TqY-Wn-TfB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="7s4-HZ-S4I"/>
+                            <constraint firstItem="wJX-3k-Wta" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="IXR-5K-Xhz"/>
+                            <constraint firstItem="kEu-6n-F7S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YIK-Vy-fNx"/>
+                            <constraint firstItem="kEu-6n-F7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="a4I-9I-YbU"/>
+                            <constraint firstItem="5UT-zc-gQ3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="emx-1h-6Gb"/>
+                            <constraint firstItem="wJX-3k-Wta" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="kNB-w3-EMk"/>
+                            <constraint firstItem="TqY-Wn-TfB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rgL-Jd-7sI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

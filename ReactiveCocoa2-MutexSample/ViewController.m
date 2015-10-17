@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "ReactiveMutext.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) ReactiveMutext *pullControl;
 
 @end
 
@@ -16,12 +19,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.pullControl = [ReactiveMutext new];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)startPullUp:(id)sender {
+    [self.pullControl tryPerformPullUp];
+}
+
+- (IBAction)startPullDown:(id)sender {
+    [self.pullControl tryPerformPullDown];
+}
+
+- (IBAction)stopPullDown:(id)sender {
+    [self.pullControl stopPerformPullDown];
+}
+
+- (IBAction)stopPullUp:(id)sender {
+    [self.pullControl stopPerformPullUp];
 }
 
 @end
